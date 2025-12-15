@@ -40,69 +40,6 @@ Designed to work reliably across **desktop, mobile, and iOS Safari**.
       <s-sortable-list-item slot="item" id="five">Five</s-sortable-list-item>
     </s-sortable-list>
 
-### <s-sortable-list>
-
-#### Attributes
-
-Attribute
-
-Type
-
-Required
-
-Description
-
-id
-
-string
-
-No
-
-Optional identifier. When provided, sorted results will include list item IDs in callbacks.
-
-sorting
-
-boolean
-
-No
-
-Enables or disables drag-and-drop reordering. Defaults to false.
-
-### <s-sortable-list-item>
-
-#### Attributes
-
-Attribute
-
-Type
-
-Required
-
-Description
-
-id
-
-string
-
-Yes
-
-Unique identifier for the item. Used to determine sorted order.
-
-slot
-
-string
-
-Yes
-
-Must be set to "item" for the list to register the element.
-
-### Behavior
-
-- Dragging is only enabled when `sorting="true"`.
-- Items can be reordered using pointer (mouse, touch, pen).
-- Mobile scrolling is automatically handled to prevent gesture conflicts.
-- The component re-renders efficiently after sorting.
-
 ### Events
 
 The sortable list emits a custom event when sorting is complete:
@@ -122,16 +59,3 @@ The sortable list emits a custom event when sorting is complete:
 If the <s-sortable-list> has an `id`, item IDs are returned in sorted order.
 
 ---
-
-## Philosophy
-
-- Avoids framework lock-in
-- Avoids DOM reach-through from consumers
-- Uses semantic custom events as the public API
-- Mirrors native HTML element behavior where possible
-
----
-
-## License
-
-MIT
