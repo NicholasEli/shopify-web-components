@@ -61,7 +61,7 @@ class SortableList extends HTMLElement {
 		this.render();
 	}
 
-	clonePOS(event) {
+	cloneDragElement(event) {
 		const clone = this.shadowRoot.getElementById('s-sortable-list-clone');
 
 		if (!event || !clone) return null;
@@ -74,6 +74,10 @@ class SortableList extends HTMLElement {
 	}
 
 	onPointerDown(event, index) {
+		const sorting = this.getAttribute('sorting') == 'true';
+
+		if (!sorting) return null;
+
 		const elements = this.shadowRoot.querySelectorAll('li');
 		const element = elements[index];
 
@@ -89,7 +93,7 @@ class SortableList extends HTMLElement {
 		this.shadowRoot.append(clone);
 
 		setTimeout(() => {
-			this.clonePOS(event);
+			this.cloneDragElement(event);
 			clone.classList.remove('active');
 		}, 50);
 	}
@@ -99,7 +103,7 @@ class SortableList extends HTMLElement {
 
 		if (!this.dragging || !clone) return null;
 
-		this.clonePOS(event);
+		this.cloneDragElement(event);
 	}
 
 	onPointerUp(event, index) {
