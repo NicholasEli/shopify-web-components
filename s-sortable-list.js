@@ -1,5 +1,5 @@
-const sheet = new CSSStyleSheet();
-sheet.replaceSync(`
+const sortableStyleSheet = new CSSStyleSheet();
+sortableStyleSheet.replaceSync(`
   ul { position: relative; margin: 0; padding: 0; list-style: none; }
   ul:has(.active) li { cursor: grabbing;}
   li { padding: 0.75rem 0; touch-action: none; user-select: none; -webkit-user-drag: none; cursor: grab; }
@@ -37,7 +37,7 @@ class SortableList extends HTMLElement {
 	constructor() {
 		super();
 		this.shadow = this.attachShadow({ mode: 'open' });
-		this.shadow.adoptedStyleSheets = [sheet];
+		this.shadow.adoptedStyleSheets = [sortableStyleSheet];
 		this.items = [];
 		this.dragging = null;
 	}

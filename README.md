@@ -62,4 +62,54 @@ The sortable list emits a custom event when sorting is complete:
 
 If the <s-sortable-list> has an `id`, item IDs are returned in sorted order.
 
+### Carousel
+
+Classic carousel for changing between media items
+
+### Install
+
+[CDN – s-carousel.js](https://cdn.jsdelivr.net/gh/NicholasEli/shopify-web-components@main/s-carousel.js)
+
+#### Usage
+
+    <s-carousel id="carousel" title="Carousel Items">
+      <s-carousel-item
+        slot="item"
+        title="Item 1"
+        details="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-1_large.png"
+      >
+      </s-carousel-item>
+      <s-carousel-item
+        slot="item"
+        title="Item 2"
+        details="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-2_large.png"
+      >
+      </s-carousel-item>
+      <s-carousel-item
+        slot="item"
+        title="Item 3"
+        details="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-3_large.png"
+      >
+      </s-carousel-item>
+    </s-carousel>
+
+### Events
+
+The carousel emits a custom event when visible carousel item is set:
+
+    const carousel = document.getElementById('carousel');
+
+    list.addEventListener('change', (event) => {
+      console.log(event.detail.item);
+    });
+
+#### Event Payload
+
+    {
+      item: {title: '...', details: '...', image: '...'}
+    }
+
 ---

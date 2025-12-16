@@ -7,31 +7,68 @@
 		<script src="https://cdn.shopify.com/shopifycloud/polaris.js"></script>
 	</head>
 	<body>
-		<s-section heading="Sortable List">
-			<s-stack gap="small">
-				<s-stack-item>
-					<s-section>
-						<s-grid gridTemplateColumns="1fr" gap="small">
-							<s-grid-item>
-								<s-checkbox id="toggle-sort" label="Toggle Sort" />
-							</s-grid-item>
-						</s-grid>
-					</s-section>
-				</s-stack-item>
+		<s-stack gap="large">
+			<s-stack-item>
+				<s-section heading="Sortable List">
+					<s-stack gap="large">
+						<s-stack-item>
+							<s-section>
+								<s-grid gridTemplateColumns="1fr" gap="small">
+									<s-grid-item>
+										<s-checkbox
+											id="toggle-sort"
+											label="Toggle Sort"
+											details="Example with missing Three list item (see developer console)"
+										/>
+									</s-grid-item>
+								</s-grid>
+							</s-section>
+						</s-stack-item>
 
-				<s-stack-item>
-					<s-sortable-list id="sortable-list" sorting="false" with-border="true">
-						<s-sortable-list-item slot="item" id="one">One</s-sortable-list-item>
-						<s-sortable-list-item slot="item" id="two">Two</s-sortable-list-item>
-						<s-sortable-list-item slot="item">Three</s-sortable-list-item>
-						<s-sortable-list-item slot="item" id="four">Four</s-sortable-list-item>
-						<s-sortable-list-item slot="item" id="five">Five</s-sortable-list-item>
-					</s-sortable-list>
-				</s-stack-item>
-			</s-stack>
-		</s-section>
+						<s-stack-item>
+							<s-sortable-list id="sortable-list" sorting="false" with-border="true">
+								<s-sortable-list-item slot="item" id="one">One</s-sortable-list-item>
+								<s-sortable-list-item slot="item" id="two">Two</s-sortable-list-item>
+								<s-sortable-list-item slot="item">Three</s-sortable-list-item>
+								<s-sortable-list-item slot="item" id="four">Four</s-sortable-list-item>
+								<s-sortable-list-item slot="item" id="five">Five</s-sortable-list-item>
+							</s-sortable-list>
+						</s-stack-item>
+					</s-stack>
+				</s-section>
+			</s-stack-item>
+
+			<s-stack-item>
+				<s-section heading="Carousel">
+					<s-carousel id="carousel" title="Carousel Items">
+						<s-carousel-item
+							slot="item"
+							title="Item 1"
+							details="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+							image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-1_large.png"
+						>
+						</s-carousel-item>
+						<s-carousel-item
+							slot="item"
+							title="Item 2"
+							details="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+							image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-2_large.png"
+						>
+						</s-carousel-item>
+						<s-carousel-item
+							slot="item"
+							title="Item 3"
+							details="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+							image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-3_large.png"
+						>
+						</s-carousel-item>
+					</s-carousel>
+				</s-section>
+			</s-stack-item>
+		</s-stack>
 
 		<script src="./s-sortable-list.js"></script>
+		<script src="./s-carousel.js"></script>
 		<script src="./index.js"></script>
 	</body>
 </html>
