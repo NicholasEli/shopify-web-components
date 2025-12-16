@@ -5,71 +5,64 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>s-snax</title>
 		<script src="https://cdn.shopify.com/shopifycloud/polaris.js"></script>
+
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" />
+		<link rel="manifest" href="./assets/site.webmanifest" />
 		<link rel="stylesheet" href="./index.css" />
 	</head>
 	<body>
-		<s-stack gap="large">
-			<s-stack-item>
-				<s-section heading="Sortable List">
-					<s-stack gap="large">
-						<s-stack-item>
-							<s-section>
-								<s-grid gridTemplateColumns="1fr" gap="small">
-									<s-grid-item>
-										<s-checkbox
-											id="toggle-sort"
-											label="Toggle Sort"
-											details="Example with missing Three list item (see developer console)"
-										/>
-									</s-grid-item>
-								</s-grid>
-							</s-section>
-						</s-stack-item>
+		<main>
+			<!-- Navigation -->
+			<s-grid gap="large" padding="large">
+				<s-grid-item>
+					<s-grid
+						gridTemplateColumns="60px auto"
+						justifyContent="start"
+						alignItems="center"
+						gap="small"
+					>
+						<s-grid-item>
+							<div id="logo">
+								<s-image src="./assets/logo.png" alt="s-snax logo" />
+							</div>
+						</s-grid-item>
+						<s-grid-item>
+							<s-heading id="title" accessibilityRole="heading">
+								<span>s-snax</span>
+							</s-heading>
+						</s-grid-item>
+					</s-grid>
+				</s-grid-item>
+			</s-grid>
 
-						<s-stack-item>
-							<s-sortable-list id="sortable-list" sorting="false" with-border="true">
-								<s-sortable-list-item slot="item" id="one">One</s-sortable-list-item>
-								<s-sortable-list-item slot="item" id="two">Two</s-sortable-list-item>
-								<s-sortable-list-item slot="item">Three</s-sortable-list-item>
-								<s-sortable-list-item slot="item" id="four">Four</s-sortable-list-item>
-								<s-sortable-list-item slot="item" id="five">Five</s-sortable-list-item>
-							</s-sortable-list>
-						</s-stack-item>
-					</s-stack>
-				</s-section>
-			</s-stack-item>
+			<!-- Snax -->
+			<s-page>
+				<s-query-container>
+					<s-grid gap="large" gridTemplateColumns="@container (inline-size < 768px) 1fr, 1fr 1fr">
+						<!-- Sortable List -->
+						<s-grid-item>
+							<s-sortable-list-demo></s-sortable-list-demo>
+						</s-grid-item>
 
-			<s-stack-item>
-				<s-section heading="Carousel">
-					<s-carousel id="carousel" title="Carousel Items">
-						<s-carousel-item
-							slot="item"
-							title="Item 1"
-							details="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-							image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-1_large.png"
-						>
-						</s-carousel-item>
-						<s-carousel-item
-							slot="item"
-							title="Item 2"
-							details="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-							image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-2_large.png"
-						>
-						</s-carousel-item>
-						<s-carousel-item
-							slot="item"
-							title="Item 3"
-							details="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-							image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-3_large.png"
-						>
-						</s-carousel-item>
-					</s-carousel>
-				</s-section>
-			</s-stack-item>
-		</s-stack>
+						<!-- Carousel -->
+						<s-grid-item>
+							<s-carousel-demo></s-carousel-demo>
+						</s-grid-item>
+					</s-grid>
+				</s-query-container>
+			</s-page>
+		</main>
 
+		<!-- snax -->
 		<script src="./snax/s-sortable-list.js"></script>
 		<script src="./snax/s-carousel.js"></script>
+
+		<!-- demos -->
+		<script src="./demos/s-sortable-list.js"></script>
+		<script src="./demos/s-carousel.js"></script>
+
 		<script src="./index.js"></script>
 	</body>
 </html>

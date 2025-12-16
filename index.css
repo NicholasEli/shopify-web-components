@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+	--light-white: #ecf0f1;
+	--dark-white: #bdc3c7;
+	--light-gray: #95a5a6;
+	--dark-gray: #7f8c8d;
+	--light-yellow: #f1c40f;
+	--dark-yellow: #f39c12;
+	--light-purple: #8e44ac;
+	--dark-purple: #190629;
+	--light-green: #29baa5;
+	--dark-green: #27ae60;
+	--light-blue: #1195dc;
+	--dark-boue: #446cb3;
+	--light-orange: #ef5236;
+	--dark-orange: #d35400;
+	--light-red: #e74c3c;
+	--dark-red: #c0392b;
+
+	--font-sour-gummy: 'Sour Gummy', sans-serif;
+}
+
+/** Reset **/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/** Styles **/
+html {
+	background-color: var(--dark-purple);
+}
+
+#logo {
+	width: auto;
+	height: 60px;
+}
+
+#title span {
+	font-family: var(--font-sour-gummy);
+	color: var(--light-yellow);
+	font-size: 40px;
+}
