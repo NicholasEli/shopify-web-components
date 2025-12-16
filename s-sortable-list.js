@@ -2,9 +2,8 @@ const sheet = new CSSStyleSheet();
 sheet.replaceSync(`
   ul { position: relative; margin: 0; padding: 0; list-style: none; }
   ul:has(.active) li { cursor: grabbing;}
-  li { touch-action: none; user-select: none; -webkit-user-drag: none; cursor: grab; }
+  li { padding: 0.75rem 0; touch-action: none; user-select: none; -webkit-user-drag: none; cursor: grab; }
   li.active { opacity: 0; }
-  li + li { margin-top: 0.25rem; }
 
   #s-sortable-list-clone { 
   	position: fixed; 
@@ -155,6 +154,7 @@ class SortableList extends HTMLElement {
 
 	render() {
 		const sorting = this.getAttribute('sorting') == 'true';
+		const border = this.getAttribute('with-border') == 'true';
 
 		this.shadow.innerHTML = `
 			<ul>
@@ -162,7 +162,7 @@ class SortableList extends HTMLElement {
 					.filter((item) => item.id)
 					.map((item) => {
 						return `
-					<li>
+					<li${border ? 'style="border-top: 1px solid rgb(235, 235, 235)"' : ''}>
 						<s-grid gridTemplateColumns="${sorting ? 'auto 1fr' : '1fr'}" justifyContent="start">
 							${sorting ? `<s-grid-item><s-icon type="drag-handle"></s-icon></s-grid-item>` : ''}
 							<s-grid-item>${item.textContent}</s-grid-item>
