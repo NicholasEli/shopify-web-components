@@ -38,21 +38,24 @@
 			</s-grid>
 
 			<!-- Snax -->
-			<s-page>
-				<s-query-container>
-					<s-grid gap="large" gridTemplateColumns="@container (inline-size < 768px) 1fr, 1fr 1fr">
-						<!-- Sortable List -->
-						<s-grid-item>
-							<s-sortable-list-demo></s-sortable-list-demo>
-						</s-grid-item>
 
-						<!-- Carousel -->
-						<s-grid-item>
-							<s-carousel-demo></s-carousel-demo>
-						</s-grid-item>
-					</s-grid>
-				</s-query-container>
-			</s-page>
+			<s-query-container>
+				<s-grid
+					gap="large"
+					padding="large"
+					gridTemplateColumns="@container (inline-size < 960px) 1fr, 1fr 1fr"
+				>
+					<!-- Sortable List -->
+					<s-grid-item>
+						<s-sortable-list-demo></s-sortable-list-demo>
+					</s-grid-item>
+
+					<!-- Carousel -->
+					<s-grid-item>
+						<s-carousel-demo></s-carousel-demo>
+					</s-grid-item>
+				</s-grid>
+			</s-query-container>
 		</main>
 
 		<!-- libraries -->
