@@ -37,7 +37,6 @@ class CarouselDemo extends HTMLElement {
 				<div slot="usage">
 					<template>
 						<div>
-						<h1>Carousel</h1>
 						<s-carousel id="carousel" title="Carousel Items">
 						 <s-carousel-item slot="item" title="Item 1" details="Lorem ipsum dolor sit amet, consectetur adipisicing elit." image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-1_large.png"></s-carousel-item>
 						 <s-carousel-item slot="item" title="Item 2" details="Lorem ipsum dolor sit amet, consectetur adipisicing elit." image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-2_large.png"></s-carousel-item>

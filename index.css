@@ -161,6 +161,11 @@ html {
 	background-color: var(--dark-purple);
 }
 
+main {
+	position: relative;
+	z-index: 10;
+}
+
 h1,
 h2,
 h3,

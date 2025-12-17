@@ -45,7 +45,6 @@ class SortableListDemo extends HTMLElement {
 				<div slot="usage">
 					<template>
 					<div>
-					<h1>Sortable List</h1>
 					<s-sortable-list id="sortable-list" sorting="false" with-border="true">
 					 <s-sortable-list-item slot="item" id="one">One</s-sortable-list-item>
 					 <s-sortable-list-item slot="item" id="two">Two</s-sortable-list-item>

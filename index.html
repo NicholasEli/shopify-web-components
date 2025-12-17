@@ -18,6 +18,8 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/gh/speed-highlight/core/dist/themes/atom-dark.css"
 		/>
+
+		<link rel="stylesheet" href="./bg.css" />
 		<link rel="stylesheet" href="./index.css" />
 	</head>
 	<body>
@@ -85,15 +87,24 @@
 						<h1>Build Faster<br />Shopify Interfaces</h1>
 						<p class="text">
 							s-snax is a collection web components built with Shopifys Polaris UI Extensions that
-							extend beyond their current library of options
+							extend beyond their current library of options.
 						</p>
 					</div>
 				</s-stack-item>
 				<s-stack-item>
 					<div class="container text--center">
 						<h2>How To Use</h2>
-						<p class="text">First include Shopifys Polaris library if you haven't already</p>
-						<code id="polaris" class="shj-lang-html">[inline code]</code>
+						<p class="text">First include Shopifys Polaris library in your project.</p>
+						<code id="polaris" class="shj-lang-html"></code>
+					</div>
+				</s-stack-item>
+				<s-stack-item>
+					<div class="container text--center">
+						<h3>Select A Component</h3>
+						<p class="text">
+							Finally select and configure from the components below. Each component must be added
+							individually via its own CDN url.
+						</p>
 					</div>
 				</s-stack-item>
 			</s-stack>
@@ -119,6 +130,9 @@
 			</s-query-container>
 		</main>
 
+		<div class="stars"></div>
+		<div class="stars-moving"></div>
+
 		<!-- libraries -->
 		<script src="./utils/toggle.js" type="module"></script>
 
@@ -127,8 +141,8 @@
 		<script src="./snax/s-carousel.js"></script>
 
 		<!-- demos -->
-		<script src="./demos/s-sortable-list.js"></script>
-		<script src="./demos/s-carousel.js"></script>
+		<script src="./demos/s-sortable-list.js" type="module"></script>
+		<script src="./demos/s-carousel.js" type="module"></script>
 
 		<script src="./index.js" type="module"></script>
 	</body>
