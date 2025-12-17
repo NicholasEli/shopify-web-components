@@ -5,19 +5,7 @@ class SortableListDemo extends HTMLElement {
 
 	connectedCallback() {
 		this.render();
-
-		const toggle_sort = this.querySelector('#toggle-sort');
-		const sortable_list = this.querySelector('s-sortable-list');
-
-		if (toggle_sort && sortable_list) {
-			toggle_sort.addEventListener('change', (event) =>
-				sortable_list.setAttribute('sorting', event.target.checked)
-			);
-
-			this.querySelector('#sortable-list').addEventListener('change', (event) =>
-				console.log(event.detail.items)
-			);
-		}
+		this.onChange();
 	}
 
 	static get observedAttributes() {
@@ -30,6 +18,21 @@ class SortableListDemo extends HTMLElement {
 		this[attribute] = next;
 
 		this.render();
+		this.onChange();
+	}
+
+	onChange() {
+		const toggle_sort = this.querySelector('#toggle-sort');
+		const sortable_list = this.querySelector('s-sortable-list');
+
+		if (!toggle_sort || !sortable_list) return null;
+		toggle_sort.addEventListener('change', (event) =>
+			sortable_list.setAttribute('sorting', event.target.checked)
+		);
+
+		this.querySelector('#sortable-list').addEventListener('change', (event) =>
+			console.log(event.detail.items)
+		);
 	}
 
 	render() {

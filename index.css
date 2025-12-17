@@ -151,10 +151,72 @@ table {
 	box-sizing: border-box;
 }
 
+/** Editor **/
+.shj-lang-html {
+	margin: 0 auto;
+}
+
 /** Styles **/
 html {
 	background-color: var(--dark-purple);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 1rem;
+	color: var(--light-yellow);
+	font-family: var(--font-sour-gummy);
+	font-weight: 900;
+	text-transform: uppercase;
+	line-height: 1.15;
+}
+
+h1 {
+	font-size: clamp(2rem, 4vw, 4rem);
+}
+h2 {
+	font-size: clamp(1.75rem, 4vw, 3.75rem);
+}
+h3 {
+	font-size: clamp(1.5rem, 4vw, 3.5rem);
+}
+h4 {
+	font-size: clamp(1.25rem, 4vw, 3.25rem);
+}
+h5 {
+	font-size: clamp(1rem, 4vw, 3rem);
+}
+h6 {
+	font-size: clamp(0.75rem, 4vw, 2.75rem);
+}
+
+p,
+li {
+	margin-bottom: 1rem;
+}
+
+/** Container **/
+.container {
+	width: 100%;
+	max-width: 960px;
+	margin: 1rem auto;
+}
+
+/** Text **/
+.text {
+	font-size: 1rem;
+	color: var(--light-gray);
+}
+
+.text--center {
+	text-align: center;
+}
+
+/** Navigation **/
 
 #logo {
 	width: auto;
@@ -165,4 +227,18 @@ html {
 	font-family: var(--font-sour-gummy);
 	color: var(--light-yellow);
 	font-size: 40px;
+}
+
+/** Intro **/
+h1 {
+	color: var(--light-yellow);
+	text-align: center;
+	font-family: var(--font-sour-gummy);
+	font-weight: 900;
+	text-transform: uppercase;
+	line-height: 1.15;
+}
+
+.text {
+	text-align: center;
 }

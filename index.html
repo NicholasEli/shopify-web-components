@@ -10,6 +10,14 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" />
 		<link rel="manifest" href="./assets/site.webmanifest" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/gh/speed-highlight/core/dist/themes/default.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/gh/speed-highlight/core/dist/themes/atom-dark.css"
+		/>
 		<link rel="stylesheet" href="./index.css" />
 	</head>
 	<body>
@@ -36,6 +44,26 @@
 					</s-grid>
 				</s-grid-item>
 			</s-grid>
+
+			<!-- Intro -->
+			<s-stack padding="large" gap="small">
+				<s-stack-item>
+					<div class="container text--center">
+						<h1>Build Faster<br />Shopify Interfaces</h1>
+						<p class="text">
+							s-snax is a collection web components built with Shopifys Polaris UI Extensions that
+							extend beyond their current library of options
+						</p>
+					</div>
+				</s-stack-item>
+				<s-stack-item>
+					<div class="container text--center">
+						<h2>How To Use</h2>
+						<p class="text">First include Shopifys Polaris library if you haven't already</p>
+						<code id="polaris" class="shj-lang-html">[inline code]</code>
+					</div>
+				</s-stack-item>
+			</s-stack>
 
 			<!-- Snax -->
 
@@ -69,6 +97,6 @@
 		<script src="./demos/s-sortable-list.js"></script>
 		<script src="./demos/s-carousel.js"></script>
 
-		<script src="./index.js"></script>
+		<script src="./index.js" type="module"></script>
 	</body>
 </html>
