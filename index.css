@@ -161,6 +161,10 @@ html {
 	background-color: var(--dark-purple);
 }
 
+body {
+	position: relative;
+}
+
 main {
 	position: relative;
 	z-index: 10;

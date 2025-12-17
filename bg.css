@@ -1,3 +1,19 @@
+.snack {
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 3;
+	pointer-events: none;
+}
+
+.snack.animate {
+	transition:
+		top 20s linear,
+		transform 30s linear;
+}
+
 .stars {
 	width: 0.25rem;
 	height: 0.25rem;
