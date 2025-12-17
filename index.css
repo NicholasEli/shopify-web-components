@@ -12,7 +12,7 @@
 	--light-green: #29baa5;
 	--dark-green: #27ae60;
 	--light-blue: #1195dc;
-	--dark-boue: #446cb3;
+	--dark-blue: #446cb3;
 	--light-orange: #ef5236;
 	--dark-orange: #d35400;
 	--light-red: #e74c3c;
@@ -227,6 +227,15 @@ li {
 	font-family: var(--font-sour-gummy);
 	color: var(--light-yellow);
 	font-size: 40px;
+}
+
+#github svg {
+	width: 2rem;
+	height: 2rem;
+}
+
+#github svg * {
+	fill: var(--light-purple);
 }
 
 /** Intro **/
