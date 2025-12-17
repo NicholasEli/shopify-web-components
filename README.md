@@ -1,3 +1,5 @@
+<img src="https://nicholaseli.github.io/s-snax/assets/logo.png" alt="s-snax" />
+
 # s-snax
 
 A collection of **opinionated, production-ready Web Components** that extend Shopify’s official Web Component library.
@@ -10,3 +12,9 @@ All components are designed to:
 - Follow **Polaris visual and interaction patterns**
 - Be framework-agnostic (React, Vue, plain JS, etc.)
 - Use modern Web APIs (Custom Elements, Shadow DOM, Pointer Events)
+
+---
+
+### Documentation
+
+For documentation and previews visit [s-snax](https://nicholaseli.github.io/s-snax)
