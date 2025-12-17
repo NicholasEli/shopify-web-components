@@ -260,3 +260,7 @@ h1 {
 .text {
 	text-align: center;
 }
+
+#polaris {
+	overflow-x: hidden;
+}
