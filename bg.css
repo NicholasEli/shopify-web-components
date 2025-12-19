@@ -2,17 +2,16 @@
 	width: auto;
 	height: auto;
 	position: absolute;
-	top: 100%;
+	top: -100%;
 	left: 0;
 	z-index: 3;
+	transform: translateY(200%) rotate(0deg);
 	pointer-events: none;
 	filter: drop-shadow(0px 0px 6px var(--light-blue));
 }
 
 .snack.animate {
-	transition:
-		top 20s linear,
-		transform 30s linear;
+	transition: transform 30s linear;
 }
 
 .stars {

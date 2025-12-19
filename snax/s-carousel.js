@@ -93,18 +93,21 @@ class Carousel extends HTMLElement {
 		const title = item.getAttribute('title');
 		const details = item.getAttribute('details');
 		const image = item.getAttribute('image');
+		const accessibilityRole = item.getAttribute('accessibilityRole');
+		const alt = item.getAttribute('alt');
+		console.log(item);
 
 		this.shadow.innerHTML = `
 			<s-section${heading ? ` heading="${this.getAttribute('title')}` : ''}">
 				<s-grid gridTemplateColumns="1rem auto 1rem" justifyContent="space-between" alignItems="center" gap="small">
 					<s-grid-item>
-						<s-button id="${prev}" icon="chevron-left" accessibilityLabel="Previous Slide"></s-button>
+						<s-button id="${prev}" icon="chevron-left" accessibilityLabel="Previous Item"></s-button>
 					</s-grid-item>
 					<s-grid-item>
 						<ul>
 							<li>
 								<s-stack>
-									${image ? `<s-stack-item><s-image src="${image}" /></s-stack-item>` : ''}
+									${image ? `<s-stack-item><s-image src="${image}" accessibilityRole="${accessibilityRole}" alt="${alt || title}" /></s-stack-item>` : ''}
 									${title ? `<s-stack-item><s-heading>${title}</s-heading></s-stack-item>` : ''}
 									${details ? `<s-stack-item><s-paragraph>${details}</s-paragraph></s-stack-item>` : ''}
 								</s-stack>
@@ -112,7 +115,7 @@ class Carousel extends HTMLElement {
 						</ul>
 					</s-grid-item>
 					<s-grid-item>
-						<s-button id="${next}" icon="chevron-right" accessibilityLabel="Next Slide"></s-button>
+						<s-button id="${next}" icon="chevron-right" accessibilityLabel="Next Item"></s-button>
 					</s-grid-item>
 				</s-grid>
 			</s-section>

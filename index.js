@@ -21,7 +21,6 @@ const animateSnack = async function () {
 	img.classList.add('animate');
 
 	setTimeout(() => {
-		img.style.top = width * -1 + 'px';
 		img.style.transform = `rotate(${rotate}deg)`;
 	}, 1000);
 

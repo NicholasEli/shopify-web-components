@@ -38,9 +38,9 @@ class CarouselDemo extends HTMLElement {
 					<template>
 						<div>
 						<s-carousel id="carousel" title="Carousel Items">
-						 <s-carousel-item slot="item" title="Item 1" details="Lorem ipsum dolor sit amet, consectetur adipisicing elit." image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-1_large.png"></s-carousel-item>
-						 <s-carousel-item slot="item" title="Item 2" details="Lorem ipsum dolor sit amet, consectetur adipisicing elit." image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-2_large.png"></s-carousel-item>
-						 <s-carousel-item slot="item" title="Item 3" details="Lorem ipsum dolor sit amet, consectetur adipisicing elit." image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-3_large.png"></s-carousel-item>
+						 <s-carousel-item slot="item" title="Item 1" details="Lorem ipsum dolor sit amet, consectetur adipisicing elit." image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-1_large.png" accessibilityRole="none" alt="Image 1"></s-carousel-item>
+						 <s-carousel-item slot="item" title="Item 2" details="Lorem ipsum dolor sit amet, consectetur adipisicing elit." image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-2_large.png" accessibilityRole="none" alt="Image 2"></s-carousel-item>
+						 <s-carousel-item slot="item" title="Item 3" details="Lorem ipsum dolor sit amet, consectetur adipisicing elit." image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-3_large.png" accessibilityRole="none" alt="Image 3"></s-carousel-item>
 						</s-carousel>
 
 						<script>
@@ -59,6 +59,8 @@ class CarouselDemo extends HTMLElement {
 								title="Item 1"
 								details="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
 								image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-1_large.png"
+								accessibilityRole="none"
+								alt="Image 1"
 							>
 							</s-carousel-item>
 							<s-carousel-item
@@ -66,6 +68,8 @@ class CarouselDemo extends HTMLElement {
 								title="Item 2"
 								details="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
 								image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-2_large.png"
+								accessibilityRole="none"
+								alt="Image 2"
 							>
 							</s-carousel-item>
 							<s-carousel-item
@@ -73,6 +77,8 @@ class CarouselDemo extends HTMLElement {
 								title="Item 3"
 								details="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
 								image="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-3_large.png"
+								accessibilityRole="none"
+								alt="Image 3"
 							>
 							</s-carousel-item>
 						</s-carousel>
