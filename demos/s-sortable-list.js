@@ -40,7 +40,7 @@ class SortableListDemo extends HTMLElement {
 			<util-toggle 
 				title="Sortable List" 
 				text="Simple drag and drop list with toggle on and off functionality"
-				url="https://cdn.jsdelivr.net/gh/NicholasEli/s-snax@main/snax/s-sortable-list.js"
+				url="https://cdn.jsdelivr.net/gh/NicholasEli/s-snax@refs/heads/main/snax/s-sortable-list.js"
 			>
 				<div slot="usage">
 					<template>

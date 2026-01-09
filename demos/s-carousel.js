@@ -23,7 +23,7 @@ class CarouselDemo extends HTMLElement {
 			<util-toggle 
 				title="Carousel" 
 				text="Rotating content display with simple previous and next controls"
-				url="https://cdn.jsdelivr.net/gh/NicholasEli/s-snax@main/snax/s-carousel.js"
+				url="https://cdn.jsdelivr.net/gh/NicholasEli/s-snax@refs/heads/main/snax/s-carousel.js"
 			>
 				<div slot="usage">
 					<template>
