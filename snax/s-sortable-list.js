@@ -152,6 +152,16 @@ class SortableList extends HTMLElement {
 		);
 	}
 
+	set onChange(fn) {
+		if (this._changeListener) this.removeEventListener('change', this._changeListener);
+		this._changeListener = (e) => fn({ target: { value: e.detail.items } });
+		this.addEventListener('change', this._changeListener);
+	}
+
+	get onChange() {
+		return this._changeListener;
+	}
+
 	render() {
 		const sorting = this.getAttribute('sorting') == 'true';
 		const border = this.getAttribute('with-border') == 'true';

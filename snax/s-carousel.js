@@ -59,6 +59,16 @@ class Carousel extends HTMLElement {
 		);
 	}
 
+	set onChange(fn) {
+		if (this._changeListener) this.removeEventListener('change', this._changeListener);
+		this._changeListener = (e) => fn({ target: { value: e.detail.items } });
+		this.addEventListener('change', this._changeListener);
+	}
+
+	get onChange() {
+		return this._changeListener;
+	}
+
 	uuid() {
 		var S4 = function () {
 			return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
