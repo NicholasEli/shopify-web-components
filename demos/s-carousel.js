@@ -5,7 +5,6 @@ class CarouselDemo extends HTMLElement {
 
 	connectedCallback() {
 		this.render();
-		this.onChange();
 	}
 
 	static get observedAttributes() {
@@ -17,14 +16,6 @@ class CarouselDemo extends HTMLElement {
 
 		this[attribute] = next;
 		this.render();
-		this.onChange();
-	}
-
-	onChange() {
-		const carousel = this.querySelector('#carousel');
-		if (!carousel) return null;
-
-		carousel.addEventListener('change', (event) => console.log(event.detail.item));
 	}
 
 	render() {
